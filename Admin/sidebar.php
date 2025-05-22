@@ -112,7 +112,11 @@
             </a>
           </li>
 				<li class="nav-item">
+<<<<<<< HEAD
             <a href="../home/index.php" class="nav-link">
+=======
+            <a href="../user/index.php" class="nav-link">
+>>>>>>> e9f1a5c63712200868d49c400ecf37b9f85e1473
        <i class='fas fa-exchange-alt' style='font-size:18px;color:red'></i>
                  <p class="text">Switch To Landing page</p>
             </a>

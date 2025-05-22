@@ -201,7 +201,11 @@ else {return false;
                     </thead>
                     <tbody>
                         <?php
+<<<<<<< HEAD
 $sql = "SELECT tblusers.name,tblbooking.*,places.name as place_name FROM tblusers INNER JOIN tblbooking ON tblusers.username = tblbooking.user_id INNER JOIN places ON tblbooking.place_id = places.id order by tblbooking.id asc";
+=======
+$sql = "SELECT tblusers.name,tblbooking.*,places.name as place_name FROM tblusers INNER JOIN tblbooking ON tblusers.username = tblbooking.user INNER JOIN places ON tblbooking.place = places.id order by tblbooking.id asc";
+>>>>>>> e9f1a5c63712200868d49c400ecf37b9f85e1473
 
 										 $result = $conn->query($sql);
 										 $cnt=1;
@@ -216,6 +220,7 @@ $sql = "SELECT tblusers.name,tblbooking.*,places.name as place_name FROM tbluser
                         <td class="center"><?php echo $row1['check_in'];  ?></td>
                         <td class="center"><?php echo $row1['check_out'];  ?></td>
                         <td><div align="center">N<?php echo number_format((float) $row1['amount'] ,2); ?></div></td>
+<<<<<<< HEAD
                     <td class="center"><?php if ($row1['status'] == 1) {
                           echo 'Approved';
                         } else {
@@ -227,6 +232,13 @@ $sql = "SELECT tblusers.name,tblbooking.*,places.name as place_name FROM tbluser
 
 
          <?php if (($row1['status'])==(('1')))  { ?>
+=======
+						         <td class="center"><?php echo $row1['status'];  ?></td>
+                     <td class="center">
+
+
+         <?php if (($row1['status'])==(('Approved')))  { ?>
+>>>>>>> e9f1a5c63712200868d49c400ecf37b9f85e1473
               <a button class="btn btn-success"  href="approve_finish_tour.php?id=<?php echo $row1['id'];?>" onClick="return Finish();">Finish</button></a>
 					  <?php } else {?>
               <a button class="btn btn-success"  href="approve_finish_tour.php?uid=<?php echo $row1['id'];?>" onClick="return Approved();">Approved</button></a>

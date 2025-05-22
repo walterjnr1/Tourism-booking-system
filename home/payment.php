@@ -5,7 +5,11 @@ if (empty($_SESSION['username'])) {
     header("Location: login.php");
 }
 
+<<<<<<< HEAD
 $placeid=$_GET['place_id'];
+=======
+$placeid=$_GET['place'];
+>>>>>>> e9f1a5c63712200868d49c400ecf37b9f85e1473
 $amount=$_GET['amount'];
 $start=$_GET['start'];
 $end=$_GET['end'];
@@ -176,13 +180,21 @@ function payWithPaystack(e) {
     ref: Math.floor((Math.random() * 10000000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
     // label: "Optional string that replaces customer email"
     onClose: function(){
+<<<<<<< HEAD
         window.location="http://localhost/Tourism-booking-system/home/payment.php?transaction=Cancelled";
+=======
+        window.location="http://localhost/tourism_booking_system/home/payment.php?transaction=Cancelled";
+>>>>>>> e9f1a5c63712200868d49c400ecf37b9f85e1473
       alert('Transaction Cancelled.');
     },
        callback: function(response){
       let message = 'Booking Payment complete! Reference: ' + response.reference + ' . Kindly save the reference ID for future use.';
     alert(message);
+<<<<<<< HEAD
     window.location="http://localhost/Tourism-booking-system/home/verify.php?amount="+encodeURIComponent(document.getElementById("hidtotal").value)+"&email=" +encodeURIComponent(document.getElementById("hidemail").value)+"&place=" +encodeURIComponent(document.getElementById("hidplace").value)+"&start=" +encodeURIComponent(document.getElementById("hidstart").value)+"&end=" +encodeURIComponent(document.getElementById("hidend").value)+"&reference=" + response.reference    }
+=======
+    window.location="http://localhost/tourism_booking_system/home/verify.php?amount="+encodeURIComponent(document.getElementById("hidtotal").value)+"&email=" +encodeURIComponent(document.getElementById("hidemail").value)+"&place=" +encodeURIComponent(document.getElementById("hidplace").value)+"&start=" +encodeURIComponent(document.getElementById("hidstart").value)+"&end=" +encodeURIComponent(document.getElementById("hidend").value)+"&reference=" + response.reference    }
+>>>>>>> e9f1a5c63712200868d49c400ecf37b9f85e1473
   });
 
   handler.openIframe();

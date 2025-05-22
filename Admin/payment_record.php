@@ -114,7 +114,11 @@ if (empty($_SESSION['login_username'])) {
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
 
+<<<<<<< HEAD
 		     <?php
+=======
+		 <?php
+>>>>>>> e9f1a5c63712200868d49c400ecf37b9f85e1473
 			   include('sidebar.php');
 
 			   ?>
@@ -173,7 +177,11 @@ if (empty($_SESSION['login_username'])) {
                     </thead>
                     <tbody>
                         <?php
+<<<<<<< HEAD
 		                  $sql = "SELECT tblusers.name,tblpayment.payment_id,tblpayment.amount,tblpayment.payment_date,tblpayment.channel FROM tblusers INNER JOIN tblpayment ON tblusers.username = tblpayment.user_id order by tblpayment.payment_date desc";
+=======
+		$sql = "SELECT tblusers.name,tblpayment.payment_id,tblpayment.amount,tblpayment.payment_date,tblpayment.channel FROM tblusers INNER JOIN tblpayment ON tblusers.username = tblpayment.user order by tblpayment.payment_date desc";
+>>>>>>> e9f1a5c63712200868d49c400ecf37b9f85e1473
 
 										 $result = $conn->query($sql);
 										 $cnt=1;
