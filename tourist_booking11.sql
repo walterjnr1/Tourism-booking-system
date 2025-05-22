@@ -3,11 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
-<<<<<<< HEAD
 -- Generation Time: May 22, 2025 at 10:15 PM
-=======
--- Generation Time: Apr 30, 2025 at 11:55 AM
->>>>>>> e9f1a5c63712200868d49c400ecf37b9f85e1473
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -38,7 +34,6 @@ CREATE TABLE `places` (
   `category` varchar(222) NOT NULL,
   `amount` varchar(25) NOT NULL,
   `description` text NOT NULL,
-<<<<<<< HEAD
   `capacity` varchar(4) NOT NULL,
   `photo` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -50,11 +45,6 @@ CREATE TABLE `places` (
 INSERT INTO `places` (`id`, `name`, `address`, `category`, `amount`, `description`, `capacity`, `photo`) VALUES
 (2, 'Slave History Museum', 'Marina Beach', 'Cultural and Heritage Sites', '4500', 'Located within the Marina Resort complex, the Slave History Museum stands on the site of a 15th-century slave-trading warehouse in Marina Beach. Calabar was a major embarkation point during the transatlantic slave trade, with approximately 200,000 Africans sold into slavery from the city between 1662 and 1863.', '11', 'uploadImage/places/download.jpg');
 
-=======
-  `photo` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
->>>>>>> e9f1a5c63712200868d49c400ecf37b9f85e1473
 -- --------------------------------------------------------
 
 --
@@ -77,11 +67,7 @@ CREATE TABLE `tbladmin` (
 --
 
 INSERT INTO `tbladmin` (`id`, `username`, `password`, `fullname`, `email`, `role`, `status`, `photo`) VALUES
-<<<<<<< HEAD
 (1, 'walterjnr1', 'escobar2012', 'Ndueso Walter', 'newleastpaysolution@gmail.com', 'Admin', 1, 'uploadImage/Profile/photo3.jpg');
-=======
-(1, 'walterjnr1', 'escobar2012', 'Ndueso Walter', 'newleastpaysolution@gmail.com', 'Admin', 1, 'uploadImage/Profile/photo1.jpg');
->>>>>>> e9f1a5c63712200868d49c400ecf37b9f85e1473
 
 -- --------------------------------------------------------
 
@@ -92,7 +78,6 @@ INSERT INTO `tbladmin` (`id`, `username`, `password`, `fullname`, `email`, `role
 CREATE TABLE `tblbooking` (
   `id` int(4) NOT NULL,
   `booking_id` varchar(18) NOT NULL,
-<<<<<<< HEAD
   `user_id` varchar(42) NOT NULL,
   `place_id` int(4) NOT NULL,
   `check_in` varchar(25) NOT NULL,
@@ -131,15 +116,6 @@ INSERT INTO `tblcategory` (`id`, `name`) VALUES
 (5, 'Modern Attractions'),
 (6, 'Eco-tourism Sites');
 
-=======
-  `place_name` varchar(255) NOT NULL,
-  `check_in` varchar(25) NOT NULL,
-  `check_out` varchar(25) NOT NULL,
-  `amount` varchar(22) NOT NULL,
-  `status` int(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
->>>>>>> e9f1a5c63712200868d49c400ecf37b9f85e1473
 -- --------------------------------------------------------
 
 --
@@ -148,20 +124,14 @@ INSERT INTO `tblcategory` (`id`, `name`) VALUES
 
 CREATE TABLE `tblpayment` (
   `id` int(4) NOT NULL,
-<<<<<<< HEAD
   `user_id` varchar(33) NOT NULL,
   `payment_id` varchar(25) NOT NULL,
   `amount` varchar(25) NOT NULL,
   `description` text NOT NULL,
-=======
-  `payment_id` varchar(25) NOT NULL,
-  `amount` varchar(25) NOT NULL,
->>>>>>> e9f1a5c63712200868d49c400ecf37b9f85e1473
   `payment_date` varchar(25) NOT NULL,
   `channel` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-<<<<<<< HEAD
 --
 -- Dumping data for table `tblpayment`
 --
@@ -169,8 +139,6 @@ CREATE TABLE `tblpayment` (
 INSERT INTO `tblpayment` (`id`, `user_id`, `payment_id`, `amount`, `description`, `payment_date`, `channel`) VALUES
 (2, 'eTech', '381970907110', '9000', 'booking', '2025-05-22 21:06:57', 'Paystack');
 
-=======
->>>>>>> e9f1a5c63712200868d49c400ecf37b9f85e1473
 -- --------------------------------------------------------
 
 --
@@ -216,15 +184,12 @@ ALTER TABLE `tblbooking`
   ADD PRIMARY KEY (`id`);
 
 --
-<<<<<<< HEAD
 -- Indexes for table `tblcategory`
 --
 ALTER TABLE `tblcategory`
   ADD PRIMARY KEY (`id`);
 
 --
-=======
->>>>>>> e9f1a5c63712200868d49c400ecf37b9f85e1473
 -- Indexes for table `tblpayment`
 --
 ALTER TABLE `tblpayment`
@@ -244,11 +209,7 @@ ALTER TABLE `tblusers`
 -- AUTO_INCREMENT for table `places`
 --
 ALTER TABLE `places`
-<<<<<<< HEAD
   MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-=======
-  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT;
->>>>>>> e9f1a5c63712200868d49c400ecf37b9f85e1473
 
 --
 -- AUTO_INCREMENT for table `tbladmin`
@@ -260,7 +221,6 @@ ALTER TABLE `tbladmin`
 -- AUTO_INCREMENT for table `tblbooking`
 --
 ALTER TABLE `tblbooking`
-<<<<<<< HEAD
   MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
@@ -268,19 +228,12 @@ ALTER TABLE `tblbooking`
 --
 ALTER TABLE `tblcategory`
   MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-=======
-  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT;
->>>>>>> e9f1a5c63712200868d49c400ecf37b9f85e1473
 
 --
 -- AUTO_INCREMENT for table `tblpayment`
 --
 ALTER TABLE `tblpayment`
-<<<<<<< HEAD
   MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-=======
-  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT;
->>>>>>> e9f1a5c63712200868d49c400ecf37b9f85e1473
 
 --
 -- AUTO_INCREMENT for table `tblusers`

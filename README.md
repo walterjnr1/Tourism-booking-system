@@ -1,7 +1,2 @@
-<<<<<<< HEAD
 ﻿# Tourism-booking-system
 The web-based tourism booking system I developed uses PHP and MySQL to provide a seamless platform for users to book tours, hotels, and other travel-related services. The system allows tourists to browse various packages, view details, and make secure bookings. On the backend, PHP handles user interactions, while MySQL stores essential data, such as tour packages, customer details, and booking history. The system features an intuitive interface for both customers and administrators. Customers can easily select, book, and pay for services, while admins can manage inventory, track bookings, and generate reports. This system improves efficiency, enhances the user experience, and provides a streamlined booking process.
-=======
-﻿# Tourism-booking-system
-The web-based tourism booking system I developed uses PHP and MySQL to provide a seamless platform for users to book tours, hotels, and other travel-related services. The system allows tourists to browse various packages, view details, and make secure bookings. On the backend, PHP handles user interactions, while MySQL stores essential data, such as tour packages, customer details, and booking history. The system features an intuitive interface for both customers and administrators. Customers can easily select, book, and pay for services, while admins can manage inventory, track bookings, and generate reports. This system improves efficiency, enhances the user experience, and provides a streamlined booking process.
->>>>>>> e9f1a5c63712200868d49c400ecf37b9f85e1473

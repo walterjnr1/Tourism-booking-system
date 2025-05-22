@@ -222,13 +222,9 @@ $result = $conn->query($sql);
         // Output data of each row
         while($row = $result->fetch_assoc()) {
             ?>
-<<<<<<< HEAD
             <option value="">Select Category</option>
            <option value="<?php echo $row['name']; ?>"><?php echo $row['name']; ?></option>
 
-=======
-            <option value="<?php echo $row['name']; ?>"><?php echo $row['name']; ?></option>
->>>>>>> e9f1a5c63712200868d49c400ecf37b9f85e1473
             <?php
         }
     } else {

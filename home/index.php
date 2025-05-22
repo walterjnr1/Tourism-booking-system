@@ -27,11 +27,7 @@ $row = $stmt->fetch();
 $capacity=$row['capacity'];  
 
 //count places from booking
-<<<<<<< HEAD
 $stmt = $dbh->query("SELECT * FROM tblbooking where place_id='$id' and status='Approved'");
-=======
-$stmt = $dbh->query("SELECT * FROM tblbooking where place='$id' and status='Approved'");
->>>>>>> e9f1a5c63712200868d49c400ecf37b9f85e1473
 $count_booking = $stmt->rowCount();
 
 //check if capacity is full
@@ -40,11 +36,7 @@ if ($count_booking >= $capacity) {
 
 }else{
 
-<<<<<<< HEAD
 header("Location: payment.php?place_id=$id&start=$start&end=$end&amount=$amount");
-=======
-header("Location: payment.php?place=$id&start=$start&end=$end&amount=$amount");
->>>>>>> e9f1a5c63712200868d49c400ecf37b9f85e1473
 
 }
 }

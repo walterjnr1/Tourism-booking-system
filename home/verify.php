@@ -6,10 +6,6 @@ use PHPMailer\PHPMailer\Exception;
 
 //Load Composer's autoloader
 require '../vendor/autoload.php';
-<<<<<<< HEAD
-=======
-
->>>>>>> e9f1a5c63712200868d49c400ecf37b9f85e1473
 include('../inc/config.php');
 
 if ($ref ="") {
@@ -48,17 +44,10 @@ header("Location:javascript://history.go(-1)");
 
 
   //save payment details
-<<<<<<< HEAD
     $sql = 'INSERT INTO tblpayment(user_id,payment_id,description,amount,payment_date,channel) VALUES(:user_id,:payment_id,:description,:amount,:payment_date,:channel)';
     $statement = $dbh->prepare($sql);
     $statement->execute([
         ':user_id'   => $user,
-=======
-    $sql = 'INSERT INTO tblpayment(user,payment_id,description,amount,payment_date,channel) VALUES(:user,:payment_id,:description,:amount,:payment_date,:channel)';
-    $statement = $dbh->prepare($sql);
-    $statement->execute([
-        ':user'   => $user,
->>>>>>> e9f1a5c63712200868d49c400ecf37b9f85e1473
         ':payment_id'   => $ref,
         ':description'   => 'booking',
         ':amount'   => $amount,
@@ -70,7 +59,6 @@ header("Location:javascript://history.go(-1)");
         //save booking details
         //generate booking id
         $booking_id = uniqid();
-<<<<<<< HEAD
     $sql = 'INSERT INTO tblbooking(user_id,booking_id,place_id,check_in,check_out,amount) VALUES(:user_id,:booking_id,:place_id,:check_in,:check_out,:amount)';
     $statement = $dbh->prepare($sql);
     $statement->execute([
@@ -80,18 +68,6 @@ header("Location:javascript://history.go(-1)");
         ':check_in'   => $start,
          ':check_out'   => $end,
          ':amount'   => $amount
-=======
-    $sql = 'INSERT INTO tblbooking(user,booking_id,place,check_in,check_out,amount,status) VALUES(:user,:booking_id,:place,:check_in,:check_out,:amount,:status)';
-    $statement = $dbh->prepare($sql);
-    $statement->execute([
-        ':user'   => $user,
-        ':booking_id'   => $booking_id,
-        ':place'   => $placeid,
-        ':check_in'   => $start,
-         ':check_out'   => $end,
-         ':amount'   => $amount,
-         ':status'   => 'Approved'
->>>>>>> e9f1a5c63712200868d49c400ecf37b9f85e1473
 
         ]);
 
